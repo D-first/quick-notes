@@ -36,7 +36,7 @@ class QuickNotesData {
 
 Hooks.on('renderChatMessage', (message, html, data) => {
     const tooltip = game.i18n.localize('QUICK-NOTES.button-title');
-    const takeNotesButton = $(`<a class="" style=""><i class="fas fa-feather" title="${tooltip}"></i></button>`);
+    const takeNotesButton = $(`<a class="" style=""><i class="fas fa-feather" title="${tooltip}"></i></a>`);
 
     html.find('.message-metadata').append(takeNotesButton);
 
