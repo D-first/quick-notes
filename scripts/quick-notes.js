@@ -46,7 +46,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
             quickNotesJournalEntry = await QuickNotesData.createQuickNotesJournal();
         }
 
-        QuickNotesData.takeNotes(quickNotesJournalEntry, message.export());
+        QuickNotesData.takeNotes(quickNotesJournalEntry, message.data.content);
         takeNotesButton.css('color', 'Green');
     });
 });
